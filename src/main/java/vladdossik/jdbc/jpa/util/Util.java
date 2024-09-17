@@ -1,6 +1,5 @@
 package vladdossik.jdbc.jpa.util;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import vladdossik.jdbc.jpa.model.User;
@@ -14,6 +13,9 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class Util {
+
+    private static Connection connection;
+    private static SessionFactory sessionFactory;
 
     private static Properties loadJDBCProperties() {
         Properties properties = new Properties();
@@ -40,6 +42,9 @@ public class Util {
     }
 
     public static Connection getConnection() {
+        if (connection != null) {
+            return connection;
+        }
         Properties properties = loadJDBCProperties();
         String url = properties.getProperty("db.url");
         String username = properties.getProperty("db.user");
@@ -54,10 +59,7 @@ public class Util {
         return connection;
     }
 
-    public static Session getSession() {
-        Properties properties = loadHibernateProperties();
-        SessionFactory sessionFactory = new Configuration()
-                .addAnnotatedClass(User.class).addProperties(properties).buildSessionFactory();
-        return sessionFactory.getCurrentSession();
+    public static SessionFactory getSessionFactory() {
+        return new Configuration().addAnnotatedClass(User.class).buildSessionFactory();
     }
 }
