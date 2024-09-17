@@ -41,8 +41,7 @@ public class UserDaoHibernateImpl implements UserDao {
             transaction = session.beginTransaction();
             session.persist(user);
             transaction.commit();
-            System.out.println("User с именем – " + user.getName() + " добавлен в базу \n" +
-                    "данных");
+            System.out.println("User с именем – " + user.getName() + " добавлен в базу \n" + "данных");
         }
     }
 

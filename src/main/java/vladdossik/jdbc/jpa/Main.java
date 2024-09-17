@@ -1,11 +1,6 @@
 package vladdossik.jdbc.jpa;
 
 import vladdossik.jdbc.jpa.service.UserServiceImpl;
-import vladdossik.jdbc.jpa.util.Util;
-
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,8 +11,7 @@ public class Main {
         userService.saveUser("Igor", "Kornilov", (byte) 29);
         userService.saveUser("Alex", "Johnson", (byte) 19);
 
-        userService.getAllUsers()
-                .forEach(System.out::println);
+        userService.getAllUsers().forEach(System.out::println);
         userService.cleanUsersTable();
         userService.dropUsersTable();
     }
