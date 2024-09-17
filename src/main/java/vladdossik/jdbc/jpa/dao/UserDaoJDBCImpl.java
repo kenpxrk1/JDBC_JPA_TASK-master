@@ -2,7 +2,6 @@ package vladdossik.jdbc.jpa.dao;
 
 import vladdossik.jdbc.jpa.model.User;
 import vladdossik.jdbc.jpa.util.Util;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

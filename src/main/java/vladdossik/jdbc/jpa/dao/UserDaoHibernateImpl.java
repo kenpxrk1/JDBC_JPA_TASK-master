@@ -4,7 +4,6 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import vladdossik.jdbc.jpa.model.User;
 import vladdossik.jdbc.jpa.util.Util;
-
 import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
