@@ -1,8 +1,0 @@
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/Main.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/dao/UserDao.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/dao/UserDaoHibernateImpl.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/dao/UserDaoJDBCImpl.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/model/User.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/service/UserService.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/service/UserServiceImpl.java
-/Users/dimagrisin/Desktop/java_solutions/JDBC_JPA_TASK-master/src/main/java/vladdossik/jdbc/jpa/util/Util.java

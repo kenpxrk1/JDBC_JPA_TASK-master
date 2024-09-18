@@ -1,8 +1,0 @@
-vladdossik/jdbc/jpa/Main.class
-vladdossik/jdbc/jpa/dao/UserDao.class
-vladdossik/jdbc/jpa/dao/UserDaoJDBCImpl.class
-vladdossik/jdbc/jpa/model/User.class
-vladdossik/jdbc/jpa/util/Util.class
-vladdossik/jdbc/jpa/service/UserService.class
-vladdossik/jdbc/jpa/service/UserServiceImpl.class
-vladdossik/jdbc/jpa/dao/UserDaoHibernateImpl.class
