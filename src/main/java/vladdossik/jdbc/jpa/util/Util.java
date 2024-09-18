@@ -14,13 +14,13 @@ import java.util.Properties;
 
 public class Util {
 
-    private static final String propertiesPath = "src/main/resources/application.properties";
+    private static final String PROPERTIES_PATH = "src/main/resources/application.properties";
     private static Connection connection;
     private static SessionFactory sessionFactory;
 
     private static Properties loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream(propertiesPath)) {
+        try (FileInputStream fis = new FileInputStream(PROPERTIES_PATH)) {
             properties.load(fis);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -38,7 +38,6 @@ public class Util {
         String url = properties.getProperty("db.url");
         String username = properties.getProperty("db.user");
         String password = properties.getProperty("db.password");
-        System.out.println(url + "\n" + password + "\n" + username);
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(url, username, password);
