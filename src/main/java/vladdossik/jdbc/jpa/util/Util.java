@@ -14,24 +14,13 @@ import java.util.Properties;
 
 public class Util {
 
+    private static final String propertiesPath = "src/main/resources/application.properties";
     private static Connection connection;
     private static SessionFactory sessionFactory;
 
-    private static Properties loadJDBCProperties() {
+    private static Properties loadProperties() {
         Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream("src/main/resources/config.properties")) {
-            properties.load(fis);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return properties;
-    }
-
-    private static Properties loadHibernateProperties() {
-        Properties properties = new Properties();
-        try (FileInputStream fis = new FileInputStream("src/main/resources/hibernate.properties")) {
+        try (FileInputStream fis = new FileInputStream(propertiesPath)) {
             properties.load(fis);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -45,7 +34,7 @@ public class Util {
         if (connection != null) {
             return connection;
         }
-        Properties properties = loadJDBCProperties();
+        Properties properties = loadProperties();
         String url = properties.getProperty("db.url");
         String username = properties.getProperty("db.user");
         String password = properties.getProperty("db.password");
@@ -60,6 +49,6 @@ public class Util {
     }
 
     public static SessionFactory getSessionFactory() {
-        return new Configuration().addAnnotatedClass(User.class).buildSessionFactory();
+        return new Configuration().addProperties(loadProperties()).addAnnotatedClass(User.class).buildSessionFactory();
     }
 }
